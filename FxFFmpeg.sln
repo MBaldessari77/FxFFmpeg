@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FxFFmpeg", "FxFFmpeg\FxFFmpeg.csproj", "{C9C6377D-13AB-46CD-9C74-9591E16ED23D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FxFFmpeg.Tests", "FxFFmpeg.Tests\FxFFmpeg.Tests.csproj", "{628B3D6C-BEDA-442C-A3AE-945008271C9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9C6377D-13AB-46CD-9C74-9591E16ED23D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C6377D-13AB-46CD-9C74-9591E16ED23D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C6377D-13AB-46CD-9C74-9591E16ED23D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C6377D-13AB-46CD-9C74-9591E16ED23D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{628B3D6C-BEDA-442C-A3AE-945008271C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{628B3D6C-BEDA-442C-A3AE-945008271C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{628B3D6C-BEDA-442C-A3AE-945008271C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{628B3D6C-BEDA-442C-A3AE-945008271C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F9AD094-1714-46AE-86F5-08692A8C55AC}
+	EndGlobalSection
+EndGlobal
