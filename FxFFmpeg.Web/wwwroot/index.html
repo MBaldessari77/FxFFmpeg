@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+  <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body ng-app="RxFFmpeg" ng-cloak>
+  <!--
+    Your HTML content here
+  -->
+
+  <div ng-controller="RxFFmpegCtrl" ng-cloak>
+    <md-content>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+
+          <md-menu>
+            <md-button class="md-icon-button" ng-click="actions.openMenu($mdOpenMenu, $event)" aria-label="Open menu">
+              <i class="fa fa-bars"></i>
+            </md-button>
+            <md-menu-content width="4">
+              <md-menu-item>
+                <md-button ng-click="actions.openFolder($event)">
+                  <i class="fa fa-folder"></i>
+                  Open folder
+                </md-button>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+          <span>RxFFMpeg</span>
+
+          <span flex></span>
+
+          <span>
+            <img src="img/ffmpeg3d_white_20.png">
+            <md-tooltip ng-if="!states.versions" md-direction="left">
+              Version not avaible!
+            </md-tooltip>
+            <md-tooltip ng-if="states.versions" md-direction="left">
+              FFmpeg found version {{states.versions.version}}
+            </md-tooltip>
+          </span>
+
+        </div>
+      </md-toolbar>
+    </md-content>
+
+    <md-tabs ng-show="states.tabs.length" md-dynamic-height md-border-bottom>
+
+      <!--<md-tab ng-repeat="tab in states.tabs | matchTabsType:'folder'" label="{{tab.path}}">
+        <md-progress-linear ng-show="tab.waitingServer" md-mode="indeterminate"></md-progress-linear>
+        <md-progress-linear ng-show="tab.loadComplete>=0 && tab.loadComplete<100" md-mode="determinate" value="{{tab.loadComplete}}"></md-progress-linear>
+        <md-content class="md-padding" layout-xs="row" layout="row">
+          <div layout layout-wrap layout-padding layout-align="center">
+
+        <div style="width: 100%">
+          <md-checkbox ng-model="tab.includeSubFolders" ng-change="actions.loadFolder(tab)" aria-label="Include subfolders">
+            Include subfolders
+          </md-checkbox>
+        <md-divider ></md-divider>
+        </div>
+
+            <md-card style="width: 500px" ng-repeat="file in tab.files">
+              <md-card-title>
+                <md-card-title-text>
+                  <span class="md-headline">
+                    <md-tooltip ng-if="file.tooltip" md-direction="bottom">
+                      {{file.tooltip}}
+                    </md-tooltip>
+                    {{file.name}}
+                  </span>
+                  <span class="md-subhead">{{file.sizeInGb | number:2}} GB</span>
+                </md-card-title-text>
+              </md-card-title>
+              <md-card-content layout="row" layout-align="space-between">
+
+                <md-button class="md-media-sm card-media md-icon-button" aria-label="information">
+                  <i class="fa fa-info" aria-hidden="true"></i>
+                </md-button>
+
+                <md-card-actions layout="column">
+                  <md-button ng-repeat="info in file.mediaInfo" ng-show="info.isH264" class="md-button" aria-label="Is H264">
+                    H264
+                  </md-button>
+                  <md-button ng-repeat="info in file.mediaInfo" ng-show="info.isHEVC" class="md-button" aria-label="Is HEVC">
+                    HEVC
+                  </md-button>
+                  <md-button ng-repeat="info in file.mediaInfo" ng-show="info.IsUnknown" class="md-button" aria-label="Is Unknown">
+                    {{info.VideoStreamTypeRaw}}
+                  </md-button>
+                </md-card-actions>
+              </md-card-content>
+            </md-card>
+
+          </div>
+        </md-content>
+      </md-tab>-->
+
+      <md-tab ng-repeat="tab in states.tabs | matchTabsType:'folder'" label="{{tab.path}}" md-active="$location.path().substring('/path'.length)===tab.path">
+        <div ng-view></div>
+      </md-tab>
+
+    </md-tabs>
+
+  </div>
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.js"></script>
+  <script src="/bower_components/angular-aria/angular-aria.js"></script>
+  <script src="/bower_components/angular-messages/angular-messages.js"></script>
+  <script src="/bower_components/angular-route/angular-route.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="/bower_components/angular-material/angular-material.js"></script>
+
+  <!-- Your application bootstrap  -->
+  <script src="/app.js"></script>
+
+</body>
+</html>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
