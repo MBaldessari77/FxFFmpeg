@@ -49,6 +49,25 @@ namespace FxFFmpeg.Tests
 		}
 
 		[Fact]
+		public async void VersionLineIsProcessedCorrectlyAlsoInCaseOfMajorAndMinorOnly()
+		{
+			var ffmpegProcess = new FFmpegProcessStub();
+			ffmpegProcess.EnqueueOutput("ffmpeg version 3.4 Copyright(c) 2000-2017 the FFmpeg developers");
+
+			var ffmpeg = new FFmpegTask(ffmpegProcess);
+			ffmpeg.Start();
+
+			var outputs = new List<FFmpegOutput>();
+			FFmpegOutput output;
+			while ((output = await ffmpeg.GetOutputAsync()) != null)
+				outputs.Add(output);
+
+			var version = outputs.OfType<FFmpegVersion>().FirstOrDefault();
+
+			Assert.Equal(version?.Version, "3.4");
+		}
+
+		[Fact]
 		public async Task VideoStreamIsProcessedCorrectly()
 		{
 			var ffmpegProcess = new FFmpegProcessStub();

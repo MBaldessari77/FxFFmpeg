@@ -18,6 +18,8 @@ namespace FxFFmpeg.Services
 			if (Regex.Match(line, @"^ffmpeg version").Success)
 			{
 				string version = Regex.Match(line, @"[0-9]\.[0-9]\.[0-9]").Value;
+				if(string.IsNullOrWhiteSpace(version))
+					version = Regex.Match(line, @"[0-9]\.[0-9]").Value;
 				return new FFmpegVersion(version);
 			}
 
