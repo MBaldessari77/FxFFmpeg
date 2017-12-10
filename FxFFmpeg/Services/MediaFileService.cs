@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using RxFFmpegCore.Core;
-using RxFFmpegCore.Models;
+using FxFFmpeg.Core;
+using FxFFmpeg.Models;
 
-namespace RxFFmpegCore.Services
+namespace FxFFmpeg.Services
 {
 	public class MediaFileService
 	{

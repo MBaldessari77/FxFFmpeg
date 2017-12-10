@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace RxFFmpegCore.Contracts
+namespace FxFFmpeg.Contracts
 {
 	public interface IFFmpegProcess
 	{

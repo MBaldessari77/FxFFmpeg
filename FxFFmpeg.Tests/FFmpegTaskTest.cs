@@ -1,7 +1,7 @@
 ﻿using System;
-using RxFFmpegCore.Exceptions;
-using RxFFmpegCore.Models;
-using RxFFmpegCore.Tests.Stubs;
+using FxFFmpeg.Exceptions;
+using FxFFmpeg.Models;
+using FxFFmpeg.Tests.Stubs;
 using Xunit;
 
 namespace FxFFmpeg.Tests

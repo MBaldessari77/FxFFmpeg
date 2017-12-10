@@ -1,4 +1,4 @@
-namespace RxFFmpegCore.Core
+namespace FxFFmpeg.Core
 {
 	// ReSharper disable once InconsistentNaming
 	public static class FFMpegConstants

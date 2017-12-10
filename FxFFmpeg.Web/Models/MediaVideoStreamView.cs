@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
-using RxFFmpegCore.Core;
-using RxFFmpegCore.Models;
+using FxFFmpeg.Core;
+using FxFFmpeg.Models;
 
-namespace RxFFmpegWebCore.Model
+namespace FxFFmpeg.Web.Models
 {
 	public class MediaVideoStreamView
 	{

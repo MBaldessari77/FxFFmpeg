@@ -1,11 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
-using RxFFmpegCore.Contracts;
-using RxFFmpegCore.Core;
-using RxFFmpegCore.Exceptions;
-using RxFFmpegCore.Services;
+﻿using System.Threading.Tasks;
+using FxFFmpeg.Contracts;
+using FxFFmpeg.Core;
+using FxFFmpeg.Exceptions;
+using FxFFmpeg.Services;
 
-namespace RxFFmpegCore.Models
+namespace FxFFmpeg.Models
 {
 	public class FFmpegTask
 	{

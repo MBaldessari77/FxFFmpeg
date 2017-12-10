@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using RxFFmpegCore.Models;
-using RxFFmpegCore.Tests.Stubs;
+using FxFFmpeg.Models;
+using FxFFmpeg.Tests.Stubs;
 using Xunit;
 
 namespace FxFFmpeg.Tests

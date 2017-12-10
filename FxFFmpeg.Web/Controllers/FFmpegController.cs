@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using FxFFmpeg.Models;
+using FxFFmpeg.Web.Models;
 using Microsoft.AspNetCore.Mvc;
-using RxFFmpegCore.Models;
-using RxFFmpegWebCore.Model;
 
 namespace FxFFmpeg.Web.Controllers
 {

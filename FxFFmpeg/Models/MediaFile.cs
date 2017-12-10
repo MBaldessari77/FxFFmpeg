@@ -1,7 +1,7 @@
 using System.IO;
-using RxFFmpegCore.Core;
+using FxFFmpeg.Core;
 
-namespace RxFFmpegCore.Models
+namespace FxFFmpeg.Models
 {
 	public class MediaFile
 	{

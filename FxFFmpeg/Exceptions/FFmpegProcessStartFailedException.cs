@@ -2,7 +2,7 @@ using System;
 
 //using System.Runtime.Serialization;
 
-namespace RxFFmpegCore.Exceptions
+namespace FxFFmpeg.Exceptions
 {
 	//[Serializable]
 	public class FFmpegProcessStartFailedException : Exception
