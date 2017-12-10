@@ -1,6 +1,6 @@
 using System;
 
-namespace RxFFmpegCore.Models
+namespace FxFFmpeg.Models
 {
 	public class FFmpegDuration : FFmpegOutput
 	{

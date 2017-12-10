@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using RxFFmpegCore.Models;
-using RxFFmpegCore.Tests.Stubs;
+using FxFFmpeg.Models;
+using FxFFmpeg.Tests.Stubs;
 using Xunit;
 
 namespace FxFFmpeg.Tests
@@ -46,6 +46,25 @@ namespace FxFFmpeg.Tests
 			var version = outputs.OfType<FFmpegVersion>().FirstOrDefault();
 
 			Assert.Equal(version?.Version, "3.0.1");
+		}
+
+		[Fact]
+		public async void VersionLineIsProcessedCorrectlyAlsoInCaseOfMajorAndMinorOnly()
+		{
+			var ffmpegProcess = new FFmpegProcessStub();
+			ffmpegProcess.EnqueueOutput("ffmpeg version 3.4 Copyright(c) 2000-2017 the FFmpeg developers");
+
+			var ffmpeg = new FFmpegTask(ffmpegProcess);
+			ffmpeg.Start();
+
+			var outputs = new List<FFmpegOutput>();
+			FFmpegOutput output;
+			while ((output = await ffmpeg.GetOutputAsync()) != null)
+				outputs.Add(output);
+
+			var version = outputs.OfType<FFmpegVersion>().FirstOrDefault();
+
+			Assert.Equal(version?.Version, "3.4");
 		}
 
 		[Fact]

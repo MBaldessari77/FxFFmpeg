@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
-using RxFFmpegCore.Models;
+using FxFFmpeg.Models;
 
-namespace RxFFmpegCore.Services
+namespace FxFFmpeg.Services
 {
 	public class FFmpegOutputParserService
 	{
@@ -18,6 +18,8 @@ namespace RxFFmpegCore.Services
 			if (Regex.Match(line, @"^ffmpeg version").Success)
 			{
 				string version = Regex.Match(line, @"[0-9]\.[0-9]\.[0-9]").Value;
+				if(string.IsNullOrWhiteSpace(version))
+					version = Regex.Match(line, @"[0-9]\.[0-9]").Value;
 				return new FFmpegVersion(version);
 			}
 

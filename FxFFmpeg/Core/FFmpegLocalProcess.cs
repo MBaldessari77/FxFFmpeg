@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using RxFFmpegCore.Contracts;
-using RxFFmpegCore.Exceptions;
+using FxFFmpeg.Contracts;
+using FxFFmpeg.Exceptions;
 
-namespace RxFFmpegCore.Core
+namespace FxFFmpeg.Core
 {
 	public class FFmpegLocalProcess : IFFmpegProcess
 	{

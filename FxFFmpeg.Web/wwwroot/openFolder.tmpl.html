@@ -1,0 +1,35 @@
+﻿<md-dialog ng-controller="openFolderDialogController" flex>
+	<form name="form">
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<h2>Open folder ...</h2>
+				<span flex></span>
+				<md-button class="md-icon-button" ng-click="actions.cancel()" aria-label="Close dialog">
+					<i class="fa fa-times"></i>
+				</md-button>
+			</div>
+		</md-toolbar>
+		<md-progress-linear ng-show="states.waitingServer" md-mode="indeterminate"></md-progress-linear>
+		<md-dialog-content>
+			<div class="md-dialog-content">
+				<md-input-container class="md-block">
+					<label>New folder</label>
+					<input required md-no-asterisk capture-tab name="path" ng-model="model.path" on-tab="actions.suggestPath(model.path)" ng-change="form.path.$error.invalidDirectory=false">
+					<div ng-messages="form.path.$error" md-auto-hide="false">
+						<div ng-message="required">This is required.</div>
+						<div ng-message="invalidDirectory">Directory is invalid.</div>
+					</div>
+				</md-input-container>
+			</div>
+		</md-dialog-content>
+		<md-dialog-actions layout="row">
+			<span flex></span>
+			<md-button ng-disabled="form.$invalid || states.waitingServer" ng-click="actions.ok(form)">
+				Ok
+			</md-button>
+			<md-button ng-click="actions.cancel()" style="margin-right:20px;">
+				Cancel
+			</md-button>
+		</md-dialog-actions>
+	</form>
+</md-dialog>

@@ -1,6 +1,6 @@
 using System;
 
-namespace RxFFmpegCore.Exceptions
+namespace FxFFmpeg.Exceptions
 {
 	//[Serializable]
 	public class FFmpegTaskNotStartedException : Exception

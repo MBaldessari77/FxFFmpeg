@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using RxFFmpegCore.Contracts;
-using RxFFmpegCore.Exceptions;
+using FxFFmpeg.Contracts;
+using FxFFmpeg.Exceptions;
 
-namespace RxFFmpegCore.Tests.Stubs
+namespace FxFFmpeg.Tests.Stubs
 {
 	public class FFmpegProcessStub : IFFmpegProcess
 	{
