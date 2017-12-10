@@ -11,8 +11,8 @@ namespace FxFFmpeg.Models
 			Number = number;
 		}
 
-		public int Media { get; private set; }
-		public int Number { get; private set; }
-		public IEnumerable<string> Attributes { get; private set; }
+		public int Media { get; }
+		public int Number { get; }
+		public IEnumerable<string> Attributes { get; }
 	}
 }

@@ -7,6 +7,6 @@ namespace FxFFmpeg.Models
 			Version = version;
 		}
 
-		public string Version { get; private set; }
+		public string Version { get; }
 	}
 }

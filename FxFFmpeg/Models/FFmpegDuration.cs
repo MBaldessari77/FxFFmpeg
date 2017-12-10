@@ -11,8 +11,8 @@ namespace FxFFmpeg.Models
 			Bitrate = bitrate;
 		}
 
-		public TimeSpan Duration { get; private set; }
-		public decimal Start { get; private set; }
-		public int Bitrate { get; private set; }
+		public TimeSpan Duration { get; }
+		public decimal Start { get; }
+		public int Bitrate { get; }
 	}
 }

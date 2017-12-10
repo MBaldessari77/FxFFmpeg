@@ -25,8 +25,7 @@ namespace FxFFmpeg.Web.Controllers
 				if (output == null)
 					break;
 
-				var mediaVideoStream = output as MediaVideoStream;
-				if (mediaVideoStream != null)
+				if (output is MediaVideoStream mediaVideoStream)
 					outputs.Add(new MediaVideoStreamView(mediaVideoStream));
 			}
 
