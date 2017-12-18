@@ -45,7 +45,7 @@ namespace FxFFmpeg.Tests
 
 			var version = outputs.OfType<FFmpegVersion>().FirstOrDefault();
 
-			Assert.Equal(version?.Version, "3.0.1");
+			Assert.Equal("3.0.1", version?.Version);
 		}
 
 		[Fact]
@@ -64,7 +64,7 @@ namespace FxFFmpeg.Tests
 
 			var version = outputs.OfType<FFmpegVersion>().FirstOrDefault();
 
-			Assert.Equal(version?.Version, "3.4");
+			Assert.Equal("3.4", version?.Version);
 		}
 
 		[Fact]
@@ -83,9 +83,9 @@ namespace FxFFmpeg.Tests
 
 			var stream = outputs.OfType<MediaVideoStream>().FirstOrDefault();
 
-			Assert.Equal(stream?.Media, 0);
-			Assert.Equal(stream?.Number, 2);
-			Assert.Equal(stream?.Attributes?.Count(), 7);
+			Assert.Equal(0, stream?.Media);
+			Assert.Equal(2, stream?.Number);
+			Assert.Equal(7, stream?.Attributes?.Count());
 			Assert.Contains("h264 (High)", stream?.Attributes ?? Enumerable.Empty<string>());
 			Assert.Contains("yuv420p(tv, bt709)", stream?.Attributes ?? Enumerable.Empty<string>());
 			Assert.Contains("1280x720 [SAR 1:1 DAR 16:9]", stream?.Attributes ?? Enumerable.Empty<string>());
@@ -112,8 +112,8 @@ namespace FxFFmpeg.Tests
 			var duration = outputs.OfType<FFmpegDuration>().FirstOrDefault();
 
 			Assert.Equal(duration?.Duration, new TimeSpan(0, 0, 41, 33, 500));
-			Assert.Equal(duration?.Start, 0M);
-			Assert.Equal(duration?.Bitrate, 4800);
+			Assert.Equal(0M, duration?.Start);
+			Assert.Equal(4800, duration?.Bitrate);
 		}
 
 		[Fact]
@@ -133,8 +133,8 @@ namespace FxFFmpeg.Tests
 			var duration = outputs.OfType<FFmpegDuration>().FirstOrDefault();
 
 			Assert.Equal(duration?.Duration, TimeSpan.Zero);
-			Assert.Equal(duration?.Start, 0M);
-			Assert.Equal(duration?.Bitrate, 0);
+			Assert.Equal(0M, duration?.Start);
+			Assert.Equal(0, duration?.Bitrate);
 		}
 	}
 }
