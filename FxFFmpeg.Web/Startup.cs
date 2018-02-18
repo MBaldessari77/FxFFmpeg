@@ -1,5 +1,5 @@
-﻿using FxCommon.Contracts;
-using FxCommon.Services;
+﻿using FxCommonStandard.Contracts;
+using FxCommonStandard.Services;
 using FxFFmpeg.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
