@@ -48,62 +48,7 @@
       </md-toolbar>
     </md-content>
 
-    <md-tabs ng-show="states.tabs.length" md-dynamic-height md-border-bottom>
-
-      <!--<md-tab ng-repeat="tab in states.tabs | matchTabsType:'folder'" label="{{tab.path}}">
-        <md-progress-linear ng-show="tab.waitingServer" md-mode="indeterminate"></md-progress-linear>
-        <md-progress-linear ng-show="tab.loadComplete>=0 && tab.loadComplete<100" md-mode="determinate" value="{{tab.loadComplete}}"></md-progress-linear>
-        <md-content class="md-padding" layout-xs="row" layout="row">
-          <div layout layout-wrap layout-padding layout-align="center">
-
-        <div style="width: 100%">
-          <md-checkbox ng-model="tab.includeSubFolders" ng-change="actions.loadFolder(tab)" aria-label="Include subfolders">
-            Include subfolders
-          </md-checkbox>
-        <md-divider ></md-divider>
-        </div>
-
-            <md-card style="width: 500px" ng-repeat="file in tab.files">
-              <md-card-title>
-                <md-card-title-text>
-                  <span class="md-headline">
-                    <md-tooltip ng-if="file.tooltip" md-direction="bottom">
-                      {{file.tooltip}}
-                    </md-tooltip>
-                    {{file.name}}
-                  </span>
-                  <span class="md-subhead">{{file.sizeInGb | number:2}} GB</span>
-                </md-card-title-text>
-              </md-card-title>
-              <md-card-content layout="row" layout-align="space-between">
-
-                <md-button class="md-media-sm card-media md-icon-button" aria-label="information">
-                  <i class="fa fa-info" aria-hidden="true"></i>
-                </md-button>
-
-                <md-card-actions layout="column">
-                  <md-button ng-repeat="info in file.mediaInfo" ng-show="info.isH264" class="md-button" aria-label="Is H264">
-                    H264
-                  </md-button>
-                  <md-button ng-repeat="info in file.mediaInfo" ng-show="info.isHEVC" class="md-button" aria-label="Is HEVC">
-                    HEVC
-                  </md-button>
-                  <md-button ng-repeat="info in file.mediaInfo" ng-show="info.IsUnknown" class="md-button" aria-label="Is Unknown">
-                    {{info.VideoStreamTypeRaw}}
-                  </md-button>
-                </md-card-actions>
-              </md-card-content>
-            </md-card>
-
-          </div>
-        </md-content>
-      </md-tab>-->
-
-      <md-tab ng-repeat="tab in states.tabs | matchTabsType:'folder'" label="{{tab.path}}" md-active="$location.path().substring('/path'.length)===tab.path">
-        <div ng-view></div>
-      </md-tab>
-
-    </md-tabs>
+    <div ng-view></div>
 
   </div>
 
