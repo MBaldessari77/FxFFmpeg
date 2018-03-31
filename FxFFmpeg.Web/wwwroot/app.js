@@ -68,19 +68,19 @@
         openFolder: function (ev) {
           var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && $scope.customFullscreen;
           $mdDialog.show({
-              templateUrl: 'openFolder.tmpl.html',
-              parent: angular.element(document.body),
-              targetEvent: ev,
-              clickOutsideToClose: true,
-              fullscreen: useFullScreen
-            })
-            .then(function(path) {
+            templateUrl: 'openFolder.tmpl.html',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose: true,
+            fullscreen: useFullScreen
+          })
+            .then(function (path) {
               if ($scope.states.tab.path && $scope.states.tab.path === path)
                 return;
               var encodedPath = encodeURIComponent(encodeURIComponent(path));
               $location.path('/tab/' + encodedPath);
             })
-            .catch(function() {
+            .catch(function () {
             });
           $scope.$watch(function () {
             return $mdMedia('xs') || $mdMedia('sm');
@@ -109,6 +109,10 @@
         waitingServer: false
       };
 
+      $scope.model = {
+        path: ''
+      };
+
       $scope.actions = {
         suggestPath: function (path) {
           $http.get('api/path/SuggestPath?path=' + path)
@@ -127,6 +131,8 @@
                 $mdDialog.hide($scope.model.path);
               else
                 form.path.$error.invalidDirectory = true;
+            })
+            .finally(function () {
               $scope.states.waitingServer = false;
             });
         }
