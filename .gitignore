@@ -1,5 +1,5 @@
 .vs/
 bin/
 obj/
-bower_components/
+node_modules/
 *.user

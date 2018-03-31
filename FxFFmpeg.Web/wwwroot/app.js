@@ -42,8 +42,8 @@
       }
 
       $scope.actions = {
-        openMenu: function ($mdOpenMenu, ev) {
-          $mdOpenMenu(ev);
+        openMenu: function ($mdMenu, ev) {
+          $mdMenu.open(ev);
         },
         loadFolder: function (tab) {
           tab.waitingServer = true;
