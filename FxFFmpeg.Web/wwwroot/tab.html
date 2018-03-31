@@ -35,8 +35,8 @@
           <md-button ng-repeat="info in file.mediaInfo" ng-show="info.isHEVC" class="md-button" aria-label="Is HEVC">
             HEVC
           </md-button>
-          <md-button ng-repeat="info in file.mediaInfo" ng-show="info.IsUnknown" class="md-button" aria-label="Is Unknown">
-            {{info.VideoStreamTypeRaw}}
+          <md-button ng-repeat="info in file.mediaInfo" ng-show="info.isUnknown" class="md-button" aria-label="Is Unknown">
+            {{info.videoStreamTypeRaw}}
           </md-button>
         </md-card-actions>
       </md-card-content>
