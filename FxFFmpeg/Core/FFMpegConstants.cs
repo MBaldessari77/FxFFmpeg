@@ -6,8 +6,8 @@ namespace FxFFmpeg.Core
 		public const string FFmpegExecutable = "ffmpeg.exe";
 
 		public const long KByte = 1000;
-		public const long MByte = KByte* KByte;
-		public const long GByte = KByte*KByte*KByte;
+		public const long MByte = KByte * KByte;
+		public const long GByte = KByte * KByte * KByte;
 
 		public static readonly string[] SupportedMediaExtensions =
 		{

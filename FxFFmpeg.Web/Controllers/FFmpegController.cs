@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using FxFFmpeg.Objects;
-using FxFFmpeg.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FxFFmpeg.Web.Controllers
@@ -16,7 +15,7 @@ namespace FxFFmpeg.Web.Controllers
 			FFmpegTask ffmpeg = new FFmpegTask();
 			ffmpeg.Start($"-i \"{path}\"");
 
-			List<MediaVideoStreamView> outputs = new List<MediaVideoStreamView>();
+			List<MediaVideoStream> outputs = new List<MediaVideoStream>();
 
 			while (true)
 			{
@@ -26,10 +25,10 @@ namespace FxFFmpeg.Web.Controllers
 					break;
 
 				if (output is MediaVideoStream mediaVideoStream)
-					outputs.Add(new MediaVideoStreamView(mediaVideoStream));
+					outputs.Add(mediaVideoStream);
 			}
 
-			return Ok(outputs);
+			return Ok(outputs.ToArray());
 		}
 	}
 }
