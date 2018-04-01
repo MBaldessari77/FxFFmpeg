@@ -1,4 +1,4 @@
-namespace FxFFmpeg.Models
+namespace FxFFmpeg.Objects
 {
 	public class FFmpegVersion : FFmpegOutput
 	{

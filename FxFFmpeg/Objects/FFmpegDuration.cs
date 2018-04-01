@@ -1,6 +1,6 @@
 using System;
 
-namespace FxFFmpeg.Models
+namespace FxFFmpeg.Objects
 {
 	public class FFmpegDuration : FFmpegOutput
 	{

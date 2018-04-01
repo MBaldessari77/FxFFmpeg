@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
-using FxFFmpeg.Models;
+using FxFFmpeg.Objects;
 
 namespace FxFFmpeg.Services
 {

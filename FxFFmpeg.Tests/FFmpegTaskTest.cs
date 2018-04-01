@@ -1,6 +1,6 @@
 ﻿using System;
 using FxFFmpeg.Exceptions;
-using FxFFmpeg.Models;
+using FxFFmpeg.Objects;
 using FxFFmpeg.Tests.Stubs;
 using Xunit;
 

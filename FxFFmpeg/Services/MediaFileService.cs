@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using FxFFmpeg.Core;
-using FxFFmpeg.Models;
+using FxFFmpeg.Objects;
 
 namespace FxFFmpeg.Services
 {

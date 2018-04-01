@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace FxFFmpeg.Models
+namespace FxFFmpeg.Objects
 {
 	// ReSharper disable once InconsistentNaming
 	public class FFMpegStartCommand : FFMpegCommand
