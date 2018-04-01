@@ -30,13 +30,13 @@
 
         <md-card-actions layout="column">
           <md-button ng-repeat="info in file.mediaInfo" ng-show="info.isH264" class="md-button" aria-label="Is H264">
-            H264
+            H264 {{info.resolution}}
           </md-button>
           <md-button ng-repeat="info in file.mediaInfo" ng-show="info.isHEVC" class="md-button" aria-label="Is HEVC">
-            HEVC
+            HEVC {{info.resolution}}
           </md-button>
           <md-button ng-repeat="info in file.mediaInfo" ng-show="info.isUnknown" class="md-button" aria-label="Is Unknown">
-            {{info.videoStreamTypeRaw}}
+            {{info.videoStreamTypeRaw}} {{info.resolution}}
           </md-button>
         </md-card-actions>
       </md-card-content>
