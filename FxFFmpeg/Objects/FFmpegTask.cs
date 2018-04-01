@@ -4,7 +4,7 @@ using FxFFmpeg.Core;
 using FxFFmpeg.Exceptions;
 using FxFFmpeg.Services;
 
-namespace FxFFmpeg.Models
+namespace FxFFmpeg.Objects
 {
 	public class FFmpegTask
 	{

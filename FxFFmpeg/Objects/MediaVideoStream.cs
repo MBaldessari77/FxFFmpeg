@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace FxFFmpeg.Models
+namespace FxFFmpeg.Objects
 {
 	public class MediaVideoStream : MediaStream
 	{
