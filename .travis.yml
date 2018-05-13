@@ -1,9 +1,10 @@
 
 language: csharp
 solution: FxCommon.sln
-dotnet: 2.0.0
+dotnet: 2.1.200
 install:
   - nuget restore FxFFmpeg.sln
 script:
   - dotnet restore
   - dotnet build
+  - dotnet test FxFFmpeg.Tests
