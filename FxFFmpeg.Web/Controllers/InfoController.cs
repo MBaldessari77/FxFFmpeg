@@ -1,6 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿using System.Reflection;
+using System.Threading.Tasks;
 using FxFFmpeg.Objects;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.DotNet.PlatformAbstractions;
 
 namespace FxFFmpeg.Web.Controllers
 {
@@ -15,6 +17,15 @@ namespace FxFFmpeg.Web.Controllers
 			ffmpeg.Start();
 
 			FFmpegVersion version = await ffmpeg.GetOutputAsync() as FFmpegVersion;
+
+			return Ok(version);
+		}
+
+		[HttpGet]
+		[Route("[action]")]
+		public IActionResult Version()
+		{
+			string version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion;
 
 			return Ok(version);
 		}

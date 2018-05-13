@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:64798/",
+      "applicationUrl": "http://localhost:51553/",
       "sslPort": 0
     }
   },
@@ -18,11 +18,10 @@
     "FxFFmpeg.Web": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:64799/"
+      "applicationUrl": "http://localhost:51554/"
     }
   }
 }
