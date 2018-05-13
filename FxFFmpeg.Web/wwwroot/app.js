@@ -91,10 +91,16 @@
         }
       };
 
+      $http.get('api/info/version')
+        .then(function (result) {
+          $scope.states.version = result.data;
+        });
+
       $http.get('api/info/versions')
         .then(function (result) {
           $scope.states.versions = result.data;
         });
+
     })
     .controller("tabController", function ($scope, $routeParams) {
       var path = decodeURIComponent(decodeURIComponent($routeParams.tabId));
