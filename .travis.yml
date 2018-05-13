@@ -7,3 +7,4 @@ install:
 script:
   - dotnet restore
   - dotnet build
+  - dotnet test FxFFmpeg.Tests
