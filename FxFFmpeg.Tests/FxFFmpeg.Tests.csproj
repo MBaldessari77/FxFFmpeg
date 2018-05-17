@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FxFFmpeg\FxFFmpeg.csproj" />
+    <ProjectReference Include="..\FxFFmpeg.Web\FxFFmpeg.Web.csproj" />
   </ItemGroup>
 
 </Project>
