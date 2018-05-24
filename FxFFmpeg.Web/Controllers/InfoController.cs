@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using FxFFmpeg.Objects;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.DotNet.PlatformAbstractions;
 
 namespace FxFFmpeg.Web.Controllers
 {
