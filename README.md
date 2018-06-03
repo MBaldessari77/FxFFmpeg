@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/MarcoBadessari/FxFFmpeg.svg?branch=develop)](https://travis-ci.org/MarcoBadessari/FxFFmpeg)
+[![Build Status](https://travis-ci.org/MBaldessari77/FxFFmpeg.svg?branch=develop)](https://travis-ci.org/MBaldessari77/FxFFmpeg)
+
 # FxFFmpeg
 
 Web utility to display movie and some information using FFmpeg utility (see https://www.ffmpeg.org)
