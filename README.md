@@ -1,8 +1,10 @@
-# Last Build [![Build Status](https://travis-ci.org/waldrix/FxFFmpeg.svg?branch=develop)](https://travis-ci.org/waldrix/FxFFmpeg)
+[![Build Status](https://travis-ci.org/MBaldessari77/FxFFmpeg.svg?branch=develop)](https://travis-ci.org/MBaldessari77/FxFFmpeg)
 
 # FxFFmpeg
 
 Web utility to display movie and some information using FFmpeg utility (see https://www.ffmpeg.org)
+
+> by Marco Baldessari
 
 ## Releases
 
