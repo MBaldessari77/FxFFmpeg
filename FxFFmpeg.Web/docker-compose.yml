@@ -1,7 +1,10 @@
 version: '3.2'
+
 services:
+
   ffmpeg:
     image: jrottenberg/ffmpeg
+
   web:
     build: .
     ports:
