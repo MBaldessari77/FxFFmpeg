@@ -1,4 +1,4 @@
-version: '3'
+version: '3.2'
 services:
   ffmpeg:
     image: jrottenberg/ffmpeg
@@ -8,3 +8,7 @@ services:
       - "8000:80"
     depends_on:
       - ffmpeg
+    volumes:
+      - type : bind
+        source : "N:/" #local host path eg N: mapped to NAS
+        target : /media
