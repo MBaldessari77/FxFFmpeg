@@ -6,9 +6,9 @@ services:
     build: .
     ports:
       - "8000:80"
-    depends_on:
-      - ffmpeg
     volumes:
       - type : bind
         source : "N:/" #local host path eg N: mapped to NAS
         target : /media
+    depends_on:
+      - ffmpeg
