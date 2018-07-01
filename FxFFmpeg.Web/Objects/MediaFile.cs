@@ -1,7 +1,7 @@
 using System.IO;
-using FxFFmpeg.Core;
+using FxFFmpeg.Web.Core;
 
-namespace FxFFmpeg.Objects
+namespace FxFFmpeg.Web.Objects
 {
 	public class MediaFile
 	{
@@ -9,8 +9,10 @@ namespace FxFFmpeg.Objects
 
 		public MediaFile(FileInfo info) { _info = info; }
 
+		// ReSharper disable UnusedMember.Global
 		public string Name => _info.Name;
 		public decimal SizeInGb => _info.Length/(decimal) FFMpegConstants.GByte;
 		public string Path => _info.FullName;
+		// ReSharper restore UnusedMember.Global
 	}
 }

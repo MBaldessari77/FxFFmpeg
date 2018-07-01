@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
-using FxFFmpeg.Objects;
+using FxFFmpeg.Web.Objects;
 
-namespace FxFFmpeg.Services
+namespace FxFFmpeg.Web.Services
 {
 	public class FFmpegOutputParserService
 	{

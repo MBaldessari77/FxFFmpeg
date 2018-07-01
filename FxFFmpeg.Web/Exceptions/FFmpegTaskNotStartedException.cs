@@ -1,9 +1,9 @@
 using System;
 
-namespace FxFFmpeg.Exceptions
+namespace FxFFmpeg.Web.Exceptions
 {
 	//[Serializable]
-	public class FFmpegTaskNotStartedException : Exception
+	public class FFmpegTaskNotStartedException : FFmpegException
 	{
 		//
 		// For guidelines regarding the creation of new exception types, see
@@ -13,8 +13,10 @@ namespace FxFFmpeg.Exceptions
 		//
 
 		public FFmpegTaskNotStartedException() { }
+		// ReSharper disable UnusedMember.Global
 		public FFmpegTaskNotStartedException(string message) : base(message) { }
 		public FFmpegTaskNotStartedException(string message, Exception inner) : base(message, inner) { }
+		// ReSharper restore UnusedMember.Global
 
 		//protected RxFFmpegProcessStartFailedException(
 		//	SerializationInfo info,

@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using FxFFmpeg.Core;
+using FxFFmpeg.Web.Core;
 
-namespace FxFFmpeg.Objects
+namespace FxFFmpeg.Web.Objects
 {
 	public class MediaVideoStream : MediaStream
 	{
@@ -14,8 +14,10 @@ namespace FxFFmpeg.Objects
 		// ReSharper disable once InconsistentNaming
 		public bool IsHEVC => Attributes.Any(a => a.IndexOf(FFMpegConstants.HEVC, StringComparison.OrdinalIgnoreCase) != -1);
 		public bool IsUnknown => !IsH264 && !IsHEVC;
+		// ReSharper disable UnusedMember.Global
 		public string VideoStreamTypeRaw => Attributes.FirstOrDefault() ?? "N/A";
 		public string Resolution => ProcessResolution();
+		// ReSharper restore UnusedMember.Global
 
 		string ProcessResolution()
 		{

@@ -1,7 +1,7 @@
 ﻿using System;
-using FxFFmpeg.Exceptions;
-using FxFFmpeg.Objects;
 using FxFFmpeg.Tests.Stubs;
+using FxFFmpeg.Web.Exceptions;
+using FxFFmpeg.Web.Objects;
 using Xunit;
 
 namespace FxFFmpeg.Tests

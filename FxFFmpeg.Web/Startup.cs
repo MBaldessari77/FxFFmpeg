@@ -1,6 +1,6 @@
 ﻿using FxCommonStandard.Contracts;
 using FxCommonStandard.Services;
-using FxFFmpeg.Services;
+using FxFFmpeg.Web.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace FxFFmpeg.Web
 {
+	// ReSharper disable once ClassNeverInstantiated.Global
 	public class Startup
 	{
 		public Startup(IConfiguration configuration)
@@ -15,9 +16,11 @@ namespace FxFFmpeg.Web
 			Configuration = configuration;
 		}
 
-		public IConfiguration Configuration { get; }
+		// ReSharper disable once UnusedAutoPropertyAccessor.Local
+		IConfiguration Configuration { get; }
 
 		// This method gets called by the runtime. Use this method to add services to the container.
+		// ReSharper disable once UnusedMember.Global
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddMvc();

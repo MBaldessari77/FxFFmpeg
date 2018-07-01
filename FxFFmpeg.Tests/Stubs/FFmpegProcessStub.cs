@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using FxFFmpeg.Contracts;
-using FxFFmpeg.Exceptions;
+using FxFFmpeg.Web.Contracts;
+using FxFFmpeg.Web.Exceptions;
 
 namespace FxFFmpeg.Tests.Stubs
 {

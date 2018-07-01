@@ -1,6 +1,6 @@
 using System;
 
-namespace FxFFmpeg.Objects
+namespace FxFFmpeg.Web.Objects
 {
 	public class FFmpegDuration : FFmpegOutput
 	{

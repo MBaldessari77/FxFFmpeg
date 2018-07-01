@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace FxFFmpeg.Objects
+namespace FxFFmpeg.Web.Objects
 {
 	public abstract class MediaStream : FFmpegOutput
 	{

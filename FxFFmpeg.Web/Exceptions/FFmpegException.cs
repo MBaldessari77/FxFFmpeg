@@ -2,7 +2,7 @@ using System;
 
 //using System.Runtime.Serialization;
 
-namespace FxFFmpeg.Exceptions
+namespace FxFFmpeg.Web.Exceptions
 {
 	//[Serializable]
 	public abstract class FFmpegException : Exception

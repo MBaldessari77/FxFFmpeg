@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using FxFFmpeg.Contracts;
-using FxFFmpeg.Exceptions;
+using FxFFmpeg.Web.Contracts;
+using FxFFmpeg.Web.Exceptions;
 
-namespace FxFFmpeg.Core
+namespace FxFFmpeg.Web.Core
 {
 	public class FFmpegLocalProcess : IFFmpegProcess
 	{
@@ -13,7 +13,7 @@ namespace FxFFmpeg.Core
 		bool _started;
 
 		public FFmpegLocalProcess() : this(FFMpegConstants.FFmpegExecutable) { }
-		public FFmpegLocalProcess(string executables) { _executables = executables; }
+		FFmpegLocalProcess(string executables) { _executables = executables; }
 
 		public void Start(string arguments)
 		{

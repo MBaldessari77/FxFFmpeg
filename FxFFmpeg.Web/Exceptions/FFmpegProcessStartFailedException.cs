@@ -2,10 +2,10 @@ using System;
 
 //using System.Runtime.Serialization;
 
-namespace FxFFmpeg.Exceptions
+namespace FxFFmpeg.Web.Exceptions
 {
 	//[Serializable]
-	public class FFmpegProcessStartFailedException : Exception
+	public class FFmpegProcessStartFailedException : FFmpegException
 	{
 		//
 		// For guidelines regarding the creation of new exception types, see
@@ -15,6 +15,7 @@ namespace FxFFmpeg.Exceptions
 		//
 
 		public FFmpegProcessStartFailedException() { }
+		// ReSharper disable once UnusedMember.Global
 		public FFmpegProcessStartFailedException(string message) : base(message) { }
 		public FFmpegProcessStartFailedException(string message, Exception inner) : base(message, inner) { }
 

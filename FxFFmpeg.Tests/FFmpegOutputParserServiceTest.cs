@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FxFFmpeg.Objects;
 using FxFFmpeg.Tests.Stubs;
+using FxFFmpeg.Web.Objects;
 using Xunit;
 
 namespace FxFFmpeg.Tests

@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using FxFFmpeg.Core;
-using FxFFmpeg.Objects;
+using FxFFmpeg.Web.Core;
+using FxFFmpeg.Web.Objects;
 
-namespace FxFFmpeg.Services
+namespace FxFFmpeg.Web.Services
 {
+	// ReSharper disable once ClassNeverInstantiated.Global
 	public class MediaFileService
 	{
 		public IEnumerable<MediaFile> GetMediaFiles(string path, bool includeSubFolder = false)

@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
-using FxFFmpeg.Contracts;
-using FxFFmpeg.Core;
-using FxFFmpeg.Exceptions;
-using FxFFmpeg.Services;
+using FxFFmpeg.Web.Contracts;
+using FxFFmpeg.Web.Core;
+using FxFFmpeg.Web.Exceptions;
+using FxFFmpeg.Web.Services;
 
-namespace FxFFmpeg.Objects
+namespace FxFFmpeg.Web.Objects
 {
 	public class FFmpegTask
 	{
