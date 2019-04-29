@@ -1,7 +1,7 @@
 
 language: csharp
 solution: FxCommon.sln
-dotnet: 2.1.200
+dotnet: 2.1.4
 install:
   - nuget restore FxFFmpeg.sln
 script:
