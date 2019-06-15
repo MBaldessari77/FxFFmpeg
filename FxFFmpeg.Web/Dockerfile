@@ -1,16 +1,20 @@
-FROM microsoft/dotnet:latest AS build-env
+# inspired by https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/Dockerfile
+# build "docker build -t mb1977/fxffmpeg ."
+# run image example "docker run -it --rm -p 8000:80 -v /n/films:/app/media mb1977/fxffmpeg" mapping port 80->8000 path /app/media->/n/films
+
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
-# Copy csproj and restore as distinct layers
+# copy csproj and restore as distinct layers
 COPY *.csproj ./
 RUN dotnet restore
 
-# Copy everything else and build
+# copy everything else and build app
 COPY . ./
 RUN dotnet publish -c Release -o out
 
 # Build runtime image
-FROM microsoft/aspnetcore:2.0
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
 WORKDIR /app
-COPY --from=build-env /app/out .
+COPY --from=build /app/out .
 ENTRYPOINT ["dotnet", "FxFFmpeg.Web.dll"]
