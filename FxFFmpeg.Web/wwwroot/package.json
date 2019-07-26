@@ -10,8 +10,7 @@
     "angular-material": "^1.1.19",
     "angular-messages": "^1.7.8",
     "angular-route": "^1.7.8",
-    "font-awesome": "^4.7.0",
-    "gulp": "^4.0.2"
+    "font-awesome": "^4.7.0"
   },
   "devDependencies": {},
   "scripts": {

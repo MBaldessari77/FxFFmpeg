@@ -162,18 +162,5 @@
             });
         }
       };
-    })
-    .filter('matchTabsType',
-    function () {
-      return function (items, tabType) {
-        var filtered = [];
-        angular.forEach(items,
-          function (item) {
-            if (tabType === item.type) {
-              filtered.push(item);
-            }
-          });
-        return filtered;
-      };
     });
 })(window, window.angular);
